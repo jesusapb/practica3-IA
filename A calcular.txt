@@ -1,0 +1,3 @@
+soleado, 19, normal, leve
+lluvioso, 34, alta, leve
+nublado, 14, normal, fuerte
