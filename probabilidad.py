@@ -22,8 +22,15 @@ class probabilidad:
         self.lista_asado = []
         self.tama = len(self.datos)
 
-    def calcular_probabilidad(self):
+    def construir_listas(self):
+        for i in self.datos:
+            self.lista_pronostico.append(i[0])
+            self.lista_temperatura.append(i[1])
+            self.lista_humedad.append(i[2])
+            self.lista_viento.append(i[3])
+            self.lista_asado.append(i[4])
 
+    def calcular_probabilidad(self):
         clasificar = conjuntos(self.datos)
         clasificar.clasificar_conjuntos()
         #clasificar.imprimir_listas()
@@ -33,30 +40,26 @@ class probabilidad:
         self.viento = clasificar.viento
         self.Asado = clasificar.Asado
 
-        for i in self.datos:
-            self.lista_pronostico.append(i[0])
-            self.lista_temperatura.append(i[1])
-            self.lista_humedad.append(i[2])
-            self.lista_viento.append(i[3])
-            self.lista_asado.append(i[4])
-
         for i in self.pronostico:
-            self.prob_pronostico.append([i, self.lista_pronostico.count(i) / self.tama  ])
+            self.prob_pronostico.append([i, self.lista_pronostico.count(i) / self.tama])
+        self.prob_pronostico.sort()
         print(self.prob_pronostico)
 
         for i in self.temperatura:
-            self.prob_temperatatura.append([i, self.lista_temperatura.count(i)/ self.tama])
+            self.prob_temperatatura.append([i, self.lista_temperatura.count(i)/self.tama])
 
+        self.prob_temperatatura.sort()
         print(self.prob_temperatatura)
         
         for i in self.humedad:
             self.prob_humedad.append([i, self.lista_humedad.count(i)/self.tama])
 
+        self.prob_humedad.sort()
         print(self.prob_humedad)
 
         for i in self.viento:
             self.prob_viento.append([i,self.lista_viento.count(i)/ self.tama])
-
+        self.prob_viento.sort()
         print(self.prob_viento)
 
         for i in self.Asado:
