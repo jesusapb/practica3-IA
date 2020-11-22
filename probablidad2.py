@@ -23,3 +23,7 @@ class probabilidad2:
         #print(contador_no)
         self.proba_no = contador_no / self.tama
         #print(self.proba_no)
+
+    def imprimir_probabilidad(self):
+        print(self.proba_si)
+        print(self.proba_no)

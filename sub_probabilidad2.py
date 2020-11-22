@@ -29,16 +29,13 @@ class sub_probabilidad2:
                 self.valores_no = self.valores_no + 1
 
 
-
-
-
     def calcular_probabilidad(self):
         self.proba_si = self.valores_si /( len(self.poblacion_positiva))
         self.proba_no = self.valores_no / (len( self.poblacion_negativa))
 
-        print(len(self.poblacion_positiva))
-        print(self.valores_si)
-        print(self.proba_si)
-        print(len(self.poblacion_negativa))
-        print(self.valores_no)
-        print(self.proba_no)
+        #print(len(self.poblacion_positiva))
+        #print(self.valores_si)
+        #print(self.proba_si)
+        #print(len(self.poblacion_negativa))
+        #print(self.valores_no)
+        #print(self.proba_no)
