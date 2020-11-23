@@ -1,28 +1,26 @@
-from Decidir import *
+from probabilidad_aposteriori import *
 
+''' Esta clase toma las Datos base y aquellos A clasificar y se pasan a la 
+clase a Decidir para clasificar cada unos de los individuos '''
 
 class Naive_bayes:
-
+    #se le pasa al constructor los datos base y los datos A clasificar
     def __init__(self,Datos,A_Clasificar):
         self.Datos = Datos
         self.A_Clasificar = A_Clasificar
         self.Respuestas= []
 
-
+    # En este metodo se clasifican los valores a clasificar
     def tomar_decisiones(self):
-        #print(self.Datos)
-        #print(self.A_Clasificar)
-
         for i in self.A_Clasificar:
-
-            tomar_decision = Decidir(self.Datos,i)
+            tomar_decision = probabilidad_aposteriori(self.Datos,i)
             tomar_decision.Tomar_decision()
+            #tomar_decision.impimirRespuestas()
             self.Respuestas.append(tomar_decision.Respuesta)
-            #print(i)
 
+
+
+    def resultados(self):
         print(self.Datos)
         print(self.A_Clasificar)
-        print("Respuestas: ",self.Respuestas)
-        #pass
-
-
+        print("Respuestas: ", self.Respuestas)

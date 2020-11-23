@@ -1,5 +1,11 @@
+'''
+En esta clase se calcula el likelihood de cada valor
+es el likelihood de una hipótesis H dados los datos D,  es decir, la
+probabilidad de obtener D dado que H es verdadera.
+'''
 
-class sub_probabilidad2:
+
+class likelihood:
 
     def __init__(self,datos,posicion,A_sacar):
         self.datos = datos
@@ -19,7 +25,6 @@ class sub_probabilidad2:
             else:
                 self.poblacion_negativa.append(i)
 
-
         for i in self.poblacion_positiva:
             if i[self.posicion] == self.A_sacar:
                 self.valores_si = self.valores_si + 1
@@ -33,9 +38,12 @@ class sub_probabilidad2:
         self.proba_si = self.valores_si /( len(self.poblacion_positiva))
         self.proba_no = self.valores_no / (len( self.poblacion_negativa))
 
-        #print(len(self.poblacion_positiva))
-        #print(self.valores_si)
-        #print(self.proba_si)
-        #print(len(self.poblacion_negativa))
-        #print(self.valores_no)
-        #print(self.proba_no)
+
+
+    def imprimir_likelihood(self):
+        print(len(self.poblacion_positiva))
+        print(self.valores_si)
+        print(self.proba_si)
+        print(len(self.poblacion_negativa))
+        print(self.valores_no)
+        print(self.proba_no)

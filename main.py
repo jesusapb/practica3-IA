@@ -2,11 +2,7 @@ from conjuntos import *
 from probabilidad import *
 from sub_probabilidad import *
 from Naive_Bayes import *
-from sub_probabilidad2 import *
-from probablidad2 import *
-from Decidir import *
-
-#lista =[]
+from likelihood import *
 
 A = ["soleado", 36, "alta", "leve", False]
 B = ["soleado", 28, "alta", "fuerte", False]
@@ -24,8 +20,6 @@ M = ["nublado",27,"normal","leve",True]
 N = ["lluvioso", 21,"alta","fuerte", False]
 
 Datos= [A,B,C,D,E,F,G,H,I,J,K,L,M,N]
-#crear un metodo para mejorar la impresion
-#print(lista)
 
 NI1 = ["soleado", 19, "normal", "leve"]
 NI2 = ["lluvioso", 34, "alta", "leve"]
@@ -51,14 +45,17 @@ A_Calcular = [NI1,NI2,NI3]
 #decidir = Naive_bayes(lista)
 #decidir.nuevoCalculo(NI1)
 
-#verosimilitud = sub_probabilidad2(lista, 2,"alta")
+#verosimilitud = likelihood (Datos, 2,"normal")
 #verosimilitud.obtener_poblaciones()
+#verosimilitud.calcular_probabilidad()
+#verosimilitud.imprimir_likelihood()
 #verosimilitud.calcular_probabilidad()
 
 #decision = Decidir(Datos,NI3)
 #decision.Tomar_decision()
 #decision.impimirRespuestas()
 
-
-tomar_decision = Naive_bayes(Datos,A_Calcular)
-tomar_decision.tomar_decisiones()
+if  __name__ ==  '__main__':
+    tomar_decision = Naive_bayes(Datos,A_Calcular)
+    tomar_decision.tomar_decisiones()
+    tomar_decision.resultados()
