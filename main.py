@@ -1,8 +1,4 @@
-from conjuntos import *
-from probabilidad import *
-from sub_probabilidad import *
 from Naive_Bayes import *
-from likelihood import *
 
 A = ["soleado", 36, "alta", "leve", False]
 B = ["soleado", 28, "alta", "fuerte", False]
@@ -25,37 +21,9 @@ NI1 = ["soleado", 19, "normal", "leve"]
 NI2 = ["lluvioso", 34, "alta", "leve"]
 NI3 = ["nublado", 14, "normal", "fuerte"]
 
-A_Calcular = [NI1,NI2,NI3]
-
-#clasificar1 =conjuntos(lista)
-#clasificar1.clasificar_conjuntos()
-#clasificar1.imprimir_listas()
-
-#proba = probabilidad(lista)
-#proba.construir_listas()
-#proba.calcular_probabilidad()
-
-#indv = sub_probabilidad(lista,0,"soleado")
-#indv.obtener_poblacion()
-
-#proba = probabilidad2(lista)
-#proba. sacar_probabilidad()
-#proba.imprimir_probabilidad()
-
-#decidir = Naive_bayes(lista)
-#decidir.nuevoCalculo(NI1)
-
-#verosimilitud = likelihood (Datos, 2,"normal")
-#verosimilitud.obtener_poblaciones()
-#verosimilitud.calcular_probabilidad()
-#verosimilitud.imprimir_likelihood()
-#verosimilitud.calcular_probabilidad()
-
-#decision = Decidir(Datos,NI3)
-#decision.Tomar_decision()
-#decision.impimirRespuestas()
+A_Clasificar = [NI1,NI2,NI3]
 
 if  __name__ ==  '__main__':
-    tomar_decision = Naive_bayes(Datos,A_Calcular)
-    tomar_decision.tomar_decisiones()
-    tomar_decision.resultados()
+    tomar_decision = Naive_bayes(Datos,A_Clasificar)
+    tomar_decision.Clasificar()
+    tomar_decision.Resultados()

@@ -1,8 +1,6 @@
+'''En esta clase se calcula la probabilidad a priori, la cual es la forma de
+introducir conocimiento previo sobre los valores que puede tomar la hipótesis.'''
 
-'''
-En esta clase se calcula la probabilidad a priori, la cual es la forma de
-introducir conocimiento previo sobre los valores que puede tomar la hipótesis.
-'''
 class probabilidad_apriori:
 
     # Al constructor se le pasan los datos
@@ -13,9 +11,9 @@ class probabilidad_apriori:
         self.tama = len(self.datos)
 
 
-    ''' se saca la probabilidad, primero contando cuantos valores son positivos y
-    cuantos son negativos, acontinuacion se divide cada uno entre el tamaño 
-    de la poblacion para obtener las probilidades '''
+    ''' se saca la probabilidad, primero contando cuantos valores son
+    positivos y cuantos son negativos, acontinuacion se divide cada uno
+    entre el tamaño de la poblacion para obtener las probilidades '''
     def sacar_probabilidad(self):
         contador_si = 0
         contador_no = 0
