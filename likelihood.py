@@ -21,7 +21,7 @@ class likelihood:
 #se calcula aquellos que cumplen la condicion
     def obtener_poblaciones(self):
         for i in self.datos:
-            if  i[4]== True:
+            if  i[4]== "Si":
                 self.poblacion_positiva.append(i)
             else:
                 self.poblacion_negativa.append(i)
@@ -35,8 +35,8 @@ class likelihood:
                 self.valores_no = self.valores_no + 1
 
 
-    # En este metodo se vivide los individuos que pertenecen a la poblacion indicada
-    # entre el numero de inviduos que cumplen la condicion
+    # En este metodo se vivide los individuos que pertenecen a la poblacion
+    # indicada entre el numero de inviduos que cumplen la condicion
     def calcular_probabilidad(self):
         self.proba_si = self.valores_si /( len(self.poblacion_positiva))
         self.proba_no = self.valores_no / (len( self.poblacion_negativa))

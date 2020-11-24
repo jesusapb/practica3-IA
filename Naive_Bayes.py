@@ -21,6 +21,6 @@ class Naive_bayes:
 
     # Este metodo es muy importante en el se imprimen los resultados
     def Resultados(self):
-        print(self.Datos)
-        print(self.A_Clasificar)
-        print("Respuestas: ", self.Respuestas)
+        print("Datos iniciales:",self.Datos)
+        print("datos A clasificar:",self.A_Clasificar)
+        print("Respuestas:", self.Respuestas)

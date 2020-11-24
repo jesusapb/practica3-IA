@@ -18,7 +18,7 @@ class probabilidad_apriori:
         contador_si = 0
         contador_no = 0
         for i in self.datos:
-            if i[4] == True:
+            if i[4] == "Si":
                 contador_si = contador_si + 1
             else:
                 contador_no = contador_no + 1
